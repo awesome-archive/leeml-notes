@@ -6,7 +6,7 @@
 ### Review: 梯度下降法
 在回归问题的第三步中，需要解决下面的最优化问题：
 
-$$\theta^∗= \underset{ \theta }{\operatorname{arg\ max}}  L(\theta) \tag1$$
+$$\theta^∗= \underset{ \theta }{\operatorname{arg\ min}}  L(\theta) \tag1$$
 - $L$ :lossfunction（损失函数）
 - $\theta$ :parameters（参数）
 
@@ -71,7 +71,7 @@ $$\eta^t =\frac{\eta^t}{\sqrt{t+1}} \tag4$$
 - $w$ 是一个参数
 
 Adagrad 可以做的更好：
-$$w^{t+1} \leftarrow  w^t -\frac{η^t}{\sigma}g^t \tag5$$
+$$w^{t+1} \leftarrow  w^t -\frac{η^t}{\sigma^t}g^t \tag5$$
 $$g^t =\frac{\partial L(\theta^t)}{\partial w} \tag6$$
 - $\sigma^t$ :之前参数的所有微分的均方根，对于每个参数都是不一样的。
 
